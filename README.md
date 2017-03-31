@@ -157,6 +157,7 @@ No endereço
 
 caso peça senha
 >usuario: cloudera
+
 >senha: cloudera
 
 clique em Data Browsers
