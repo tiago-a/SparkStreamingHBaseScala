@@ -1,6 +1,9 @@
 # SparkStreamingHBaseScala
 Carregando dados de uma tabela fictícia em formato .csv para uma tabela no HBase através do Spark Streaming
 
+Baixar a VM Quickstart no site da Cloudera
+https://www.cloudera.com/downloads/quickstart_vms/5-8.html
+
 Abrir a VM da Cloudera Quickstart 5.8
 Esperar ela carregar tudo, se não da problema
 
