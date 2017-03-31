@@ -5,46 +5,46 @@ Abrir a VM da Cloudera Quickstart 5.8
 Esperar ela carregar tudo, se não da problema
 
 abre um terminal
-$ service --status-all
+>$ service --status-all
 
-Hadoop datanode is running                                 [  OK  ]
-Hadoop journalnode is running                              [  OK  ]
-Hadoop namenode is running                                 [  OK  ]
-Hadoop secondarynamenode is running                        [  OK  ]
-Hadoop httpfs is running                                   [  OK  ]
-Hadoop historyserver is running                            [  OK  ]
-Hadoop nodemanager is running                              [  OK  ]
-Hadoop proxyserver is dead and pid file exists             [FAILED]
-Hadoop resourcemanager is running                          [  OK  ]
-hald (pid  1736) is running...
-HBase master daemon is running                             [  OK  ]
-hbase-regionserver is running
-HBase rest daemon is running                               [  OK  ]
-HBase Solr Indexer is not running                          [FAILED]
-HBase thrift daemon is running                             [  OK  ]
-Hive Metastore is running                                  [  OK  ]
-Hive Server2 is running                                    [  OK  ]
-
-.
-.
-.
-
-zookeeper-server is running
+>Hadoop datanode is running                                 [  OK  ]
+>Hadoop journalnode is running                              [  OK  ]
+>Hadoop namenode is running                                 [  OK  ]
+>Hadoop secondarynamenode is running                        [  OK  ]
+>Hadoop httpfs is running                                   [  OK  ]
+>Hadoop historyserver is running                            [  OK  ]
+>Hadoop nodemanager is running                              [  OK  ]
+>Hadoop proxyserver is dead and pid file exists             [FAILED]
+>Hadoop resourcemanager is running                          [  OK  ]
+>hald (pid  1736) is running...
+>HBase master daemon is running                             [  OK  ]
+>hbase-regionserver is running
+>HBase rest daemon is running                               [  OK  ]
+>HBase Solr Indexer is not running                          [FAILED]
+>HBase thrift daemon is running                             [  OK  ]
+>Hive Metastore is running                                  [  OK  ]
+>Hive Server2 is running                                    [  OK  ]
+>
+>.
+>.
+>.
+>
+>zookeeper-server is running
 
 Esses serviços tem que estar assim
 
 No mesmo terminal
-$ hbase shell
+>$ hbase shell
 
 Criar tabela pra inserir os dados
-> create 'trs', 'info'
+>> create 'trs', 'info'
 
 0 row(s) in 2.5840 seconds
 
 => Hbase::Table - trs
 
 Veja se ela foi criada mesmo
-> list
+>> list
 
 TABLE                                                                                                                                                        
 trs                                                                                                                                                          
@@ -56,14 +56,14 @@ criar duas pastas, uma chamada 'agulha' e outra 'out' no home do usuario (/home/
 copiar o arquivo output001.csv
 
 Abrir um novo terminal
-$ spark-shell --master local[2]
+>$ spark-shell --master local[2]
 
 Copiar e colar o script no spark-shell
 
-import org.apache.hadoop.hbase.HBaseConfiguration
-import org.apache.hadoop.hbase.client.Put
-import org.apache.hadoop.hbase.io.ImmutableBytesWritable
-import org.apache.hadoop.hbase.mapred.TableOutputFormat
+>import org.apache.hadoop.hbase.HBaseConfiguration
+>import org.apache.hadoop.hbase.client.Put
+>import org.apache.hadoop.hbase.io.ImmutableBytesWritable
+>import org.apache.hadoop.hbase.mapred.TableOutputFormat
 import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.mapred.JobConf
 import org.apache.spark.SparkConf
