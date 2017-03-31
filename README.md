@@ -69,7 +69,7 @@ Abrir um novo terminal
 $ spark-shell --master local[2]
 ```
 
-Copiar e colar o script no spark-shell
+Copiar e colar o script no spark-shell (É melhor copiar e colar daqui do que no arquivo listado no repo)
 
 ```
 import org.apache.hadoop.hbase.HBaseConfiguration
