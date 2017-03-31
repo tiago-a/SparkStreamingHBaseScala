@@ -62,7 +62,7 @@ trs
 => ["trs"]
 
 Criar duas pastas, uma chamada 'agulha' e outra 'out' no home do usuario (/home/cloudera/)
-copiar o arquivo output001.csv
+copiar o arquivo output001.csv para o home do usuario tambem (/home/cloudera/)
 
 Abrir um novo terminal
 ```
