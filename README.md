@@ -6,7 +6,7 @@ Esperar ela carregar tudo, se não da problema
 
 abre um terminal
 $ service --status-all
-'''
+```
 Hadoop datanode is running                                 [  OK  ]
 Hadoop journalnode is running                              [  OK  ]
 Hadoop namenode is running                                 [  OK  ]
@@ -30,7 +30,7 @@ Hive Server2 is running                                    [  OK  ]
 .
 
 zookeeper-server is running
-'''
+```
 Esses serviços tem que estar assim
 
 No mesmo terminal
