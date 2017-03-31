@@ -5,7 +5,9 @@ Abrir a VM da Cloudera Quickstart 5.8
 Esperar ela carregar tudo, se não da problema
 
 abre um terminal
+```
 $ service --status-all
+```
 ```
 Hadoop datanode is running                                 [  OK  ]
 Hadoop journalnode is running                              [  OK  ]
