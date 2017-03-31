@@ -58,14 +58,17 @@ trs
 
 => ["trs"]
 
-criar duas pastas, uma chamada 'agulha' e outra 'out' no home do usuario (/home/cloudera/)
+Criar duas pastas, uma chamada 'agulha' e outra 'out' no home do usuario (/home/cloudera/)
 copiar o arquivo output001.csv
 
 Abrir um novo terminal
+```
 $ spark-shell --master local[2]
+```
 
 Copiar e colar o script no spark-shell
 
+```
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.hadoop.hbase.client.Put
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
@@ -133,11 +136,14 @@ ssc.awaitTermination()
 }
 
 HBaseCPFStream.main()
+```
 
 O Spark Streaming está lendo a pasta agulha que está sem arquivo nenhum
 
 Agora abra outro terminal
+```
 $ cp output001.csv agulha/file1
+```
 
 Prono, agora o Spark Streaming deve consumir os dados no formato .csv, transformar em RDDs salvar na pasta out (abrindo ela um arquivo _SUCCESS deve estar lá)
 depois ele pega o RDD da pasta out, cria um objeto Put pra gravar no HBase e grava na tabela 'trs'
@@ -147,11 +153,11 @@ Para ver os dados basta entrar pelo Hue ou pelo hbase shell mesmo
 Pelo Hue:
 Abra o Firefox
 No endereço
-quickstart.cloudera:8888
+>quickstart.cloudera:8888
 
 caso peça senha
-usuario: cloudera
-senha: cloudera
+>usuario: cloudera
+>senha: cloudera
 
 clique em Data Browsers
 depois Hbase
@@ -162,9 +168,12 @@ ID como o sendo o CPF da pessoa
 Coluna de familia info e colunas data, conta e tipo
 
 O primeiro registro deve se esse
+```
 100.106.508-32
 info:data		info:conta		info:tipo
 5-8-1914		9823			DOC
-
+```
 Para ver pelo hbase shell basta voltar no terminal que ele estava aberto
+```
 > scan 'trs', {LIMIT=>10}
+```
