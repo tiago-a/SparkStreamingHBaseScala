@@ -36,18 +36,22 @@ zookeeper-server is running
 Esses serviços tem que estar assim
 
 No mesmo terminal
+```
 $ hbase shell
+```
 
 Criar tabela pra inserir os dados
+```
 > create 'trs', 'info'
-
+```
 0 row(s) in 2.5840 seconds
 
 => Hbase::Table - trs
 
 Veja se ela foi criada mesmo
+```
 > list
-
+```
 TABLE                                                                                                                                                        
 trs                                                                                                                                                          
 1 row(s) in 0.0290 seconds
